@@ -8,14 +8,11 @@ html
     link(href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/sandstone/bootstrap.min.css", rel="stylesheet", type="text/css")
   body
   .container
-    .main
-      .header
-        h1
-          strong #{community}
-            h2 #{__('HEADER', community)}
     .row
       form(method="POST", action="/invite")#join-form.form
         div(class="absolute-center responsive")
+          h1 #{community}
+          h2 #{__('HEADER', community)}
           #logo-container
           div(class="col-sm-12 col-md-10 col-md-offset-1")
             div(class="form-group input-group")
@@ -23,8 +20,7 @@ html
                 i(class="glyphicon glyphicon-user")
               input(name="email", class="form-control", type="email", placeholder="#{__('ENTER_EMAIL')}")#slack-email.field
             div(class="form-group")
-              input(type="submit", class="btn btn-success", value="Join").submit
-
+              input(type="submit", class="btn btn-success btn-sm", value="Join").submit
     script.
       var tokenRequired = #{tokenRequired};
       var form = document.getElementById('join-form');
