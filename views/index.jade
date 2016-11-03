@@ -11,10 +11,10 @@ html
     .row
       form(method="POST", action="/invite")#join-form.form
         div(class="absolute-center responsive")
-          h1 #{community}
-          h2 #{__('HEADER', community)}
           #logo-container
           div(class="col-sm-12 col-md-10 col-md-offset-1")
+            h3 #{community}
+            small discuss library data, open data, data visualisation and data standards.
             div(class="form-group input-group")
               span(class="input-group-addon")
                 i(class="glyphicon glyphicon-user")
